@@ -557,6 +557,20 @@ Vue.createApp({
         "price",
         "numPages",
       ];
+      return columnHead;
+    },
+    filterBooks() {
+      const filteredBooks = this.books.filter(
+        (book) => book.publisher === "O'Reilly Media"
+      );
+      return filteredBooks;
+    },
+  },
+  methods: {
+    applyDiscountToPrice(price) {
+      price = Number(price.replace("$", "")) * 0.8;
+      price = price.toFixed(2);
+      return "$" + price;
     },
   },
 }).mount("#app");
