@@ -16,6 +16,7 @@ Vue.createApp({
       } else {
         this.title = "Good Night";
       }
+      document.title = this.title;
     },
   },
   computed: {},
