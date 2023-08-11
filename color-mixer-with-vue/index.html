@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@latest/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer</title>
+</head>
+
+<body id="app" class="inside">
+    <header :style="customColors">
+        <div class="slider-container">
+            <div class="red-container rgb-container">
+                <label for="red">r</label>
+                <input class="slider-red" type="range" name="red" id="red" step="1" min="0" max="255" :value="valueRed"
+                    @input="valueRed = $event.target.value">
+            </div>
+            <div class="green-container rgb-container">
+                <label for="green">g</label>
+                <input class="slider-green" type="range" name="green" id="green" step="1" min="0" max="255"
+                    :value="valueGreen" @input="valueGreen = $event.target.value">
+            </div>
+            <div class="blue-container rgb-container">
+                <label for="blue">b</label>
+                <input class="slider-blue" type="range" name="blue" id="blue" step="1" min="0" max="255"
+                    :value="valueBlue" @input="valueBlue = $event.target.value">
+            </div>
+
+        </div>
+        <div class="btn-container">
+            <button class="btn-random-color" @click="getRandomColor">Random Color</button>
+        </div>
+        <div class="hexvalue-container">
+            <p class="hexvalue">{{hexvalue}}</p>
+        </div>
+    </header>
+    <main class="main" :style="customColors">
+
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

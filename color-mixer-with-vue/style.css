@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+  font-family: monospace;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --value-red: 168;
+  --value-green: 240;
+  --value-blue: 96;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 15%;
+  background-color: rgb(
+    var(--value-red),
+    var(--value-green),
+    var(--value-blue),
+    0.25
+  );
+}
+
+.slider-container {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.rgb-container {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  padding-right: 0.5rem;
+}
+
+.slider-red {
+  accent-color: rgb(231, 71, 71);
+}
+.slider-green {
+  accent-color: rgb(67, 219, 67);
+}
+
+.slider-blue {
+  accent-color: rgb(46, 46, 240);
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+.btn-random-color {
+  cursor: pointer;
+  height: 2.5rem;
+  background-color: rgb(
+    var(--value-red),
+    var(--value-green),
+    var(--value-blue),
+    0.8
+  );
+}
+
+.btn-random-color:hover {
+  background-color: rgb(
+    var(--value-red),
+    var(--value-green),
+    var(--value-blue),
+    0.5
+  );
+}
+
+.btn-random-color:active {
+  background-color: rgb(
+    var(--value-red),
+    var(--value-green),
+    var(--value-blue),
+    0.3
+  );
+}
+.hexvalue-container {
+  display: flex;
+}
+
+.hexvalue {
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+main {
+  background-color: rgb(
+    var(--value-red),
+    var(--value-green),
+    var(--value-blue)
+  );
+  height: 85%;
+}
